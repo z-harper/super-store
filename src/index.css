@@ -1,6 +1,46 @@
 
-p {
+.navbar {
+  background: #693bcc;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  background-color: white;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.hamburger {
+  color: white;
+}
+
+.nav-link {
+  color: white;
   font-weight: bold;
-  margin: 0;
-  padding: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.nav-link:hover {
+  color: #f35f1c;
+}
+
+.nav-link.active {
+  color: #f35f1c;
+  font-weight: bold;
+  outline: none;
+  box-shadow: none;
 }

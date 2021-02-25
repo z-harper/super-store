@@ -1,32 +1,53 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-
-const NavigationLink = styled.p`
-  font-weight: bold;
-  margin: 0;
-`;
 
 const NavigationBar = () => {
+
+  // navbar linknames and paths
+  const navbarLinks = [
+    {
+      name: 'Home',
+      link: '/'
+    },
+    {
+      name: 'Deals',
+      link: '/deals'
+    },
+    {
+      name: 'Cart',
+      link: '/cart'
+    }
+  ]
+  // add active class to current button
+  const [active, setActive] = useState('')
+
+
   return (
-    <Navbar collapseOnSelect expand='sm' bg='dark' variant='dark'>
-      <Navbar.Brand as={Link} to='/'>Super Store</Navbar.Brand>
-      <Navbar.Toggle />
-      <Navbar.Collapse>
-        <Nav className='ml-auto'>
-          <Nav.Link active='' eventKey='1' as={Link} to='/'>
-            <NavigationLink>Home</NavigationLink>
-          </Nav.Link>
-          <Nav.Link active='' eventKey='2' as={Link} to='/deals'>
-            <NavigationLink>Deals</NavigationLink>
-          </Nav.Link>
-          <Nav.Link active='' eventKey='3' as={Link} to='/cart'>
-            <NavigationLink>Cart</NavigationLink>
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <nav className='navbar navbar-expand-sm'>
+      <div className='container'>
+        <Link className='navbar-brand' to='/'>Super Store</Link>
+        <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+          <span className='navbar-toggler-icon'><i className='fa fa-bars fa-lg hamburger' aria-hidden="true"></i></span>
+        </button>
+        <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+          <ul className='navbar-nav ml-auto'>
+            {navbarLinks.map(linkObj => {
+              return (
+                <li className='nav-item' key={linkObj.name}>
+                  <Link
+                    className={active === linkObj.name ? 'nav-link active' : 'nav-link'}
+                    to={linkObj.link}
+                    onClick={() => setActive(linkObj.name)}
+                  >
+                    {linkObj.name}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </div>
+    </nav>
   )
 }
 

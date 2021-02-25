@@ -4,21 +4,21 @@ const url = 'https://gp-super-store-api.herokuapp.com/item/list?sortDir=asc'
 
 const Home = () => {
 
-  const [items, setItems] = useState([])
+  // const [items, setItems] = useState([])
 
-  const getItems = async () => {
-    const response = await fetch(url)
-    const items = await response.json()
-    console.log(items)
-    setItems(items)
-  }
+  // const getItems = async () => {
+  //   const response = await fetch(url)
+  //   const items = await response.json()
+  //   console.log(items)
+  //   setItems(items)
+  // }
 
-  useEffect(() => {
-    getItems()
-  }, [])
+  // useEffect(() => {
+  //   getItems()
+  // }, [])
 
   return (
-    <div>
+    <div className='container'>
       <h1>Home Page</h1>
     </div>
   )

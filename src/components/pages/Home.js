@@ -1,6 +1,3 @@
-
-const url = 'https://gp-super-store-api.herokuapp.com/item/list?sortDir=asc'
-
 const Home = () => {
 
   return (

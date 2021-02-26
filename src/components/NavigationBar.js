@@ -1,26 +1,26 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+// navbar linknames and paths
+const navbarLinks = [
+  {
+    name: 'Home',
+    link: '/'
+  },
+  {
+    name: 'Deals',
+    link: '/deals'
+  },
+  {
+    name: 'Cart',
+    link: '/cart'
+  }
+]
+
 const NavigationBar = () => {
 
-  // navbar linknames and paths
-  const navbarLinks = [
-    {
-      name: 'Home',
-      link: '/'
-    },
-    {
-      name: 'Deals',
-      link: '/deals'
-    },
-    {
-      name: 'Cart',
-      link: '/cart'
-    }
-  ]
   // add active class to current button
   const [active, setActive] = useState('')
-
 
   return (
     <nav className='navbar navbar-expand-sm'>

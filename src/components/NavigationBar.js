@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 // navbar linknames and paths
 const navbarLinks = [
@@ -19,13 +18,10 @@ const navbarLinks = [
 
 const NavigationBar = () => {
 
-  // add active class to current button
-  const [active, setActive] = useState('')
-
   return (
     <nav className='navbar navbar-expand-sm'>
       <div className='container'>
-        <Link className='navbar-brand' to='/' onClick={() => setActive('Home')}>Super Store</Link>
+        <NavLink className='navbar-brand' exact to='/'>Super Store</NavLink>
         <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
           <span className='navbar-toggler-icon'><i className='fa fa-bars fa-lg hamburger' aria-hidden="true"></i></span>
         </button>
@@ -34,13 +30,16 @@ const NavigationBar = () => {
             {navbarLinks.map(linkObj => {
               return (
                 <li className='nav-item' key={linkObj.name}>
-                  <Link
-                    className={active === linkObj.name ? 'nav-link active' : 'nav-link'}
-                    to={linkObj.link}
-                    onClick={() => setActive(linkObj.name)}
+                  <NavLink
+                    className={'nav-link'}
+                    exact to={linkObj.link}
+                    activeStyle={{
+                      fontWeight: 'bold',
+                      color: '#f35f1c'
+                    }}
                   >
                     {linkObj.name}
-                  </Link>
+                  </NavLink>
                 </li>
               )
             })}

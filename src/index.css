@@ -1,4 +1,10 @@
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .navbar {
   background: #693bcc;
 }
@@ -10,10 +16,6 @@
 .navbar-brand:hover {
   color: white;
   text-decoration: none;
-}
-
-.navbar-toggler {
-  background-color: white;
 }
 
 .navbar-toggler:focus,
@@ -33,6 +35,56 @@
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: #f35f1c;
 }
 
+
+[class*='col-'] {
+  padding-top: 16px;
+}
+
+.col {
+  height: 425px;
+  border: 3px solid #693bcc;
+  border-radius: 5px;
+}
+
+.card {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  color:#20123a;
+  text-align: center;
+}
+
+.item-on-sale {
+  background-color: #cb1f9c;
+  border-radius: 5px;
+  color: white;
+}
+
+.card button {
+  padding-bottom: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #f35f1c;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 22px;
+}
+
+.card button:hover {
+  opacity: 0.85;
+  color: white;
+}
+
+
+
+.fa-star, 
+.fa-star-half-alt {
+  color: #693bcc;
+}

@@ -74,10 +74,8 @@ const Home = () => {
                       <p>{starRating(item.avgRating)}</p>
                       {/* <button type='button' className='mb-0 quick-add-btn'><small>Quick Add</small></button> */}
                     </div>
-                    <div className='mt-1 mb-2'>
-                      <button type='button' className='btn btn-block view-item-btn'>
-                        <small>View Item</small>
-                      </button>
+                    <div className='mt-2 mb-1'>
+                      <button type='button' className='btn btn-block view-item-btn'>View Item</button>
                     </div>
                   </div>
                 </div>

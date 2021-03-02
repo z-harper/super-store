@@ -44,7 +44,7 @@ body {
 }
 
 .col {
-  height: 425px;
+  height: 440px;
   border: 3px solid #693bcc;
   border-radius: 5px;
 }
@@ -57,6 +57,14 @@ body {
   margin: auto;
   color:#20123a;
   text-align: center;
+}
+
+.item-title {
+  color: #f35f1c;
+}
+
+.item-title:hover {
+  color: #f35f1c;
 }
 
 .item-on-sale {
@@ -82,9 +90,20 @@ body {
   color: white;
 }
 
-
-
 .fa-star, 
 .fa-star-half-alt {
   color: #693bcc;
+}
+
+.view-item {
+  padding: 5px;
+  background-color: #f35f1c;
+  border-radius: 5px;
+  color: white;
+}
+
+.view-item:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 0.85;
 }

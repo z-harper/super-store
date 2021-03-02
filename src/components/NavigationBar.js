@@ -33,6 +33,10 @@ const NavigationBar = () => {
                   <NavLink
                     className={'nav-link'}
                     exact to={linkObj.link}
+                    style={{
+                      border: 'none',
+                      outline: 'none'
+                    }}
                     activeStyle={{
                       fontWeight: 'bold',
                       color: '#f35f1c'

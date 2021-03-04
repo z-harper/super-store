@@ -31,9 +31,9 @@ const starRating = (rating) => {
 
 const StarRating = ({ rating }) => {
   return (
-    <p>
+    <span>
       {starRating(rating)}
-    </p>
+    </span>
   )
 }
 

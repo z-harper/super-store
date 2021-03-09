@@ -14,7 +14,7 @@ const ItemList = ({ items }) => {
       {items.map(item => {
         return (
           <div key={item._id}>
-            <div className='col'>
+            <div className='col' style={{ height: '425px' }}>
               <div className='card border-0'>
                 <img src={item.imageUrl} className='card-img-top' width='100%' height='185px' />
                 <div className='card-body pt-0 px-0'>
@@ -34,7 +34,7 @@ const ItemList = ({ items }) => {
                   <div className='mt-2 mb-1'>
                     <button
                       type='button'
-                      className='btn btn-block'
+                      className='btn btn-block add-to-cart'
                       onClick={(e) => console.log(item.name)}
                     >
                       Add to Cart
